@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-northeast-1:156962844638:task-definition/894137-pensioner-detail-service:1"
+        LoadBalancerInfo:
+          ContainerName: "pensioner-detail-service"
+          ContainerPort: "8083"
+        PlatformVersion: "LATEST"
